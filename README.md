@@ -1,153 +1,93 @@
 # 応用情報技術者試験 学習リポジトリ
 
 ## 🎯 目標
-- **午前試験：70〜80点以上**
-- **午後試験：70〜80点以上**
+**2026年11月 前期試験 一発合格（午前・午後ともに75点以上）**
 
-## 👤 受験者プロフィール
+## 📋 試験概要
 | 項目 | 内容 |
 |------|------|
-| 開発経験 | 開発エンジニア 2年 |
-| インフラ経験 | クラウドエンジニア 1年 |
-| 保有資格 | AWS CLF / AIF / SAA / SOA / DVA / 基本情報技術者 |
-| 学習環境 | GitHub + Claude Code |
+| 試験名 | 応用情報技術者試験（AP） |
+| 2026年度の方式 | CBT（Computer Based Testing） |
+| 科目A（旧午前） | 四肢択一 80問 150分 |
+| 科目B（旧午後） | 記述式（キーボード入力）11問中5問選択 150分 |
+| 合格基準 | 科目A・B ともに60点以上 |
+| 前期試験予定 | 2026年11月頃 |
 
----
+## 🤖 Claude Code エージェント構成
 
-## 📋 試験概要（2026年度版）
-
-### ⚠️ 2026年度からの重要変更点
-- **試験形式：ペーパー → CBT（Computer Based Testing）方式へ移行**
-- **科目名称変更：午前 → 科目A、午後 → 科目B**
-- 試験内容・出題形式・問題数・試験時間は変更なし
-- 試験時期：前期（2026年11月頃）・後期（2027年2月頃）
-
-### 試験構成
-
-| 区分 | 時間 | 形式 | 問題数 | 合格基準 |
-|------|------|------|--------|----------|
-| 午前（科目A） | 150分 | 四肢択一 | 80問（全問必須） | 60点以上/100点 |
-| 午後（科目B） | 150分 | 記述式 | 11問中5問選択（問1必須） | 60点以上/100点 |
-
-### 午前問題 出題内訳
-| 分野 | 問題数 | 割合 |
-|------|--------|------|
-| テクノロジ系（問1〜50） | 50問 | 62.5% |
-| マネジメント系（問51〜60） | 10問 | 12.5% |
-| ストラテジ系（問61〜80） | 20問 | 25% |
-
-### 午後問題 選択戦略
-- **問1（情報セキュリティ）：必須**
-- **問2〜11：4問選択**
-
-エンジニアバックグラウンドを活かした推奨選択分野：
-1. 情報セキュリティ（必須）
-2. ネットワーク
-3. データベース
-4. ソフトウェア設計 or アルゴリズム
-5. プロジェクトマネジメント
-
----
+| エージェント | 役割 |
+|------------|------|
+| **PM** | 進捗記録・スケジュール管理・マイルストーン監視 |
+| **チューター** | 概念解説・過去問解説・苦手克服アドバイス |
+| **試験戦略アドバイザー** | 得点戦略・選択分野最適化・本番シミュレーション |
+| **コンテンツ作成** | カテゴリ別まとめ・解説ページの自動生成 |
+| **レビュアー** | 午後記述の採点・フィードバック・模範解答提示 |
 
 ## 📁 フォルダ構成
 
 ```
-ap-study/
-├── README.md                    # このファイル
-├── 00_overview/                 # 試験概要・学習計画
-│   ├── exam_overview.md         # 試験情報まとめ
-│   ├── study_plan.md            # 学習計画（週次）
-│   └── scoring_strategy.md     # 得点戦略
-│
-├── 01_morning/                  # 午前問題（科目A）カテゴリ別まとめ
-│   ├── 01_basic_theory/         # 基礎理論
-│   ├── 02_algorithms_data_structures/  # アルゴリズム・データ構造
-│   ├── 03_computer_architecture/       # コンピュータ構成要素
-│   ├── 04_os_middleware/               # OS・ミドルウェア
-│   ├── 05_hardware/                    # ハードウェア
-│   ├── 06_networks/                    # ネットワーク
-│   ├── 07_databases/                   # データベース
-│   ├── 08_information_security/        # 情報セキュリティ
-│   ├── 09_system_development/          # システム開発
-│   ├── 10_project_management/          # プロジェクトマネジメント
-│   ├── 11_service_management/          # サービスマネジメント
-│   ├── 12_system_audit/                # システム監査
-│   ├── 13_management_strategy/         # 経営戦略
-│   ├── 14_corporate_strategy/          # 企業戦略・ビジネス
-│   └── 15_legal_ethics/                # 法規・倫理・標準化
-│
-├── 02_afternoon/                # 午後問題（科目B）分野別まとめ
-│   ├── 01_security_required/    # 情報セキュリティ（必須）
-│   ├── 02_software_design/      # ソフトウェア設計
-│   ├── 03_algorithms/           # アルゴリズム
-│   ├── 04_network/              # ネットワーク
-│   ├── 05_database/             # データベース
-│   ├── 06_embedded/             # 組込みシステム
-│   ├── 07_information_systems/  # 情報システム
-│   ├── 08_project_management/   # プロジェクトマネジメント
-│   ├── 09_service_management/   # サービスマネジメント
-│   ├── 10_system_audit/         # システム監査
-│   └── 11_corporate_it_strategy/ # 企業と法務・IT戦略
-│
-├── 03_weak_points/              # 苦手問題まとめ（要復習）
-│   ├── morning_weak.md          # 午前の苦手問題
-│   └── afternoon_weak.md        # 午後の苦手問題
-│
-├── 04_tips_and_knowhow/         # 試験テクニック・ノウハウ
-│   ├── morning_tips.md          # 午前の解き方・コツ
-│   ├── afternoon_tips.md        # 午後の解き方・コツ
-│   ├── time_management.md       # 時間配分戦略
-│   └── exam_day_checklist.md    # 試験当日チェックリスト
-│
-├── 05_progress/                 # 進捗管理
-│   ├── daily_log.md             # 日次学習ログ
-│   ├── weekly_summary.md        # 週次サマリー
-│   ├── mock_exam_results.md     # 模擬試験・過去問スコア
-│   └── category_score.md        # カテゴリ別習熟度
-│
-└── 06_past_exam_analysis/       # 過去問傾向分析
-    ├── trend_analysis.md        # 出題傾向分析
-    └── frequently_wrong.md      # よく間違える問題パターン
+ouyouzyouhou/
+├── CLAUDE.md                    ← Claude Code設定（エージェント・スキル定義）
+├── README.md                    ← このファイル
+├── .claude/
+│   ├── agents/                  ← サブエージェント定義
+│   │   ├── pm.md                ← PM（進捗管理）
+│   │   ├── tutor.md             ← チューター
+│   │   ├── strategist.md        ← 試験戦略アドバイザー
+│   │   ├── content_creator.md   ← コンテンツ作成
+│   │   └── reviewer.md          ← レビュアー（記述採点）
+│   └── skills/
+│       ├── log_progress.md      ← 進捗記録スキル
+│       ├── add_weak_point.md    ← 苦手登録スキル
+│       ├── generate_summary.md  ← まとめ生成スキル
+│       └── score_exam.md        ← 模試採点スキル
+├── 00_overview/                 ← 試験概要・学習計画・戦略
+├── 01_morning/                  ← 科目A カテゴリ別まとめ（15カテゴリ）
+│   ├── 01_basic_theory/
+│   ├── 02_algorithms_data_structures/
+│   ├── 03_computer_architecture/
+│   ├── 04_os_middleware/
+│   ├── 05_hardware/
+│   ├── 06_networks/             ← ★重点（AWS経験活用）
+│   ├── 07_databases/            ← ★重点（開発経験活用）
+│   ├── 08_information_security/ ← ★最重点（必須・午後直結）
+│   ├── 09_system_development/
+│   ├── 10_project_management/   ← ★重点（午後選択）
+│   ├── 11_service_management/   ← ★重点（午後選択）
+│   ├── 12_system_audit/
+│   ├── 13_management_strategy/
+│   ├── 14_corporate_strategy/
+│   └── 15_legal_ethics/
+├── 02_afternoon/                ← 科目B 分野別まとめ（選択5分野）
+│   ├── 01_security_required/    ← ★必須
+│   ├── 02_software_design/
+│   ├── 03_algorithms/
+│   ├── 04_network/              ← ★選択
+│   ├── 05_database/             ← ★選択
+│   ├── 06_embedded/
+│   ├── 07_information_systems/
+│   ├── 08_project_management/   ← ★選択
+│   ├── 09_service_management/   ← ★選択
+│   ├── 10_system_audit/
+│   └── 11_corporate_it_strategy/
+├── 03_weak_points/              ← 苦手問題まとめ（要復習）
+│   ├── morning_weak.md
+│   └── afternoon_weak.md
+├── 04_tips_and_knowhow/         ← 試験ノウハウ・コツ
+├── 05_progress/                 ← 進捗管理
+│   ├── daily_log.md
+│   ├── weekly_summary.md
+│   ├── mock_exam_results.md
+│   └── category_score.md
+└── 06_past_exam_analysis/       ← 過去問傾向分析
 ```
 
----
-
-## 🛠️ Claude Code での使い方
-
-### 日々の学習フロー
-```bash
-# 1. 過去問を解く（ap-siken.com 等を活用）
-# 2. 間違えた問題を記録
-claude "午前問題でXXXについて間違えた。03_weak_points/morning_weak.md に追記して"
-
-# 3. カテゴリ別まとめを充実させる
-claude "01_morning/06_networks/ にTCP/IPの重要ポイントをまとめて"
-
-# 4. 進捗を記録する
-claude "今日の学習ログを05_progress/daily_log.md に追記して。午前80問中62点だった"
-```
-
-### 進捗確認
-```bash
-claude "05_progress/の内容をもとに今週の進捗をまとめて"
-claude "03_weak_points/を分析して、優先的に復習すべきカテゴリを教えて"
-```
-
----
-
-## 📊 合格率・難易度
-- 合格率：約25%（4人に1人）
-- 偏差値：約65相当（TAC調べ）
-- 推奨学習時間：200〜500時間（独学の場合）
-- 合格者平均年齢：28歳
-
----
+## ⚠️ 個人情報ポリシー
+- 氏名・企業名・所属・連絡先等は**一切記載しない**
+- パスワード・APIキー・トークン等は**絶対に記載しない**
+- 職場名・学校名・プロジェクト名等の固有名詞は記載しない
+- 記録してよいのはスコア・日付・学習内容のみ
 
 ## 🔗 参考リソース
-- [IPA公式 応用情報技術者試験](https://www.ipa.go.jp/shiken/kubun/ap.html)
-- [応用情報技術者試験ドットコム（過去問）](https://www.ap-siken.com/)
-- [シラバス Ver.7.2（最新）](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
-
----
-
-*最終更新：2026年4月*
+- [IPA公式](https://www.ipa.go.jp/shiken/kubun/ap.html)
+- [過去問演習（ap-siken.com）](https://www.ap-siken.com/)
